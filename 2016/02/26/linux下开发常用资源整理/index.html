@@ -1,0 +1,834 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="efficiency," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="linux下开发常用资源整理
+python(初级,进阶,调试,框架)
+linux(命令,代码环境优化,shell,vim,tmux)
+git下常用命令
+服务相关(nginx,redis,mongodb,mysql,docker)
+算法相关(寻路,排序,动态规划,DFS,BFS,Dijkstra)
+latex,markdown
+应用软件中快捷键">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux下开发常用资源整理">
+<meta property="og:url" content="http://yoursite.com/2016/02/26/linux下开发常用资源整理/index.html">
+<meta property="og:site_name" content="Hilaopo">
+<meta property="og:description" content="linux下开发常用资源整理
+python(初级,进阶,调试,框架)
+linux(命令,代码环境优化,shell,vim,tmux)
+git下常用命令
+服务相关(nginx,redis,mongodb,mysql,docker)
+算法相关(寻路,排序,动态规划,DFS,BFS,Dijkstra)
+latex,markdown
+应用软件中快捷键">
+<meta property="og:updated_time" content="2016-07-08T06:58:53.996Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="linux下开发常用资源整理">
+<meta name="twitter:description" content="linux下开发常用资源整理
+python(初级,进阶,调试,框架)
+linux(命令,代码环境优化,shell,vim,tmux)
+git下常用命令
+服务相关(nginx,redis,mongodb,mysql,docker)
+算法相关(寻路,排序,动态规划,DFS,BFS,Dijkstra)
+latex,markdown
+应用软件中快捷键">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/02/26/linux下开发常用资源整理/"/>
+
+  <title> linux下开发常用资源整理 | Hilaopo </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Hilaopo</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                linux下开发常用资源整理
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-02-26T10:46:33+08:00" content="2016-02-26">
+              2016-02-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/linux/" itemprop="url" rel="index">
+                    <span itemprop="name">linux</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/26/linux下开发常用资源整理/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/02/26/linux下开发常用资源整理/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/02/26/linux下开发常用资源整理/" class="leancloud_visitors" data-flag-title="linux下开发常用资源整理">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <ul>
+<li>linux下开发常用资源整理<ul>
+<li>python(初级,进阶,调试,框架)</li>
+<li>linux(命令,代码环境优化,shell,vim,tmux)</li>
+<li>git下常用命令</li>
+<li>服务相关(nginx,redis,mongodb,mysql,docker)</li>
+<li>算法相关(寻路,排序,动态规划,DFS,BFS,Dijkstra)</li>
+<li>latex,markdown</li>
+<li>应用软件中快捷键</li>
+</ul>
+</li>
+</ul>
+<a id="more"></a>
+<hr>
+<h1 id="python-初级-进阶-调试-框架"><a href="#python-初级-进阶-调试-框架" class="headerlink" title="python(初级,进阶,调试,框架)"></a>python(初级,进阶,调试,框架)</h1><h2 id="初级"><a href="#初级" class="headerlink" title="初级:"></a>初级:</h2><p>文件读写:<br>f = open(‘f.txt’, ‘w’) # 在当前目录(pwd)下创建f.txt<br>f.write(str(XX).encode(‘utf8’)+’\n’) # 写入中文时编码为utf8或unicode<br>f.close # 关闭后才会显示<br>异常处理:<br>except (ValueError, IndexError) as e:  # 捕获多种错误的正确方式</p>
+<p>逻辑判断:<br>any()和all()</p>
+<p>闭包:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span>  <span class="title">aoo</span><span class="params">(a, b)</span>:</span></div><div class="line">        c = a</div><div class="line">        <span class="function"><span class="keyword">def</span>  <span class="title">boo</span> <span class="params">(x)</span>:</span></div><div class="line">                x = b + <span class="number">1</span></div><div class="line">                <span class="keyword">return</span> a,b,c,x</div><div class="line">        <span class="keyword">return</span> boo</div></pre></td></tr></table></figure></p>
+<p>使用点操作符来访问字典:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">class dotdict(dict):</div><div class="line">    &quot;&quot;&quot;dot.notation access to dictionary attributes&quot;&quot;&quot;</div><div class="line">    def __getattr__(self, attr):</div><div class="line">        return self.get(attr)</div><div class="line">    __setattr__= dict.__setitem__</div><div class="line">    __delattr__= dict.__delitem__</div><div class="line"></div><div class="line">mydict = &#123;&apos;val&apos;:&apos;it works&apos;&#125;</div><div class="line">mydict = dotdict(mydict)</div><div class="line">mydict.val</div></pre></td></tr></table></figure></p>
+<p>正则表达式(RegEx):</p>
+<h2 id="进阶"><a href="#进阶" class="headerlink" title="进阶:"></a>进阶:</h2><p>with及contextlib的用法:</p>
+<h2 id="调试"><a href="#调试" class="headerlink" title="调试:"></a>调试:</h2><h3 id="ipython魔法方法"><a href="#ipython魔法方法" class="headerlink" title="ipython魔法方法"></a>ipython魔法方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">%cpaste  # 粘贴整段代码,保持正确缩进</div><div class="line"></div><div class="line"># 代码修改后自动载入</div><div class="line">%load_ext autoreload</div><div class="line">%autoreload 2</div><div class="line"># 在ipython启动时自动运行</div><div class="line">&apos;&apos;&apos;</div><div class="line">先执行</div><div class="line">ipython profile create</div><div class="line">在生成的文件中添加</div><div class="line">c.InteractiveShellApp.exec_lines = []</div><div class="line">c.InteractiveShellApp.exec_lines.append(&apos;%load_ext autoreload&apos;)</div><div class="line">c.InteractiveShellApp.exec_lines.append(&apos;%autoreload 2&apos;)</div><div class="line">&apos;&apos;&apos;</div><div class="line"></div><div class="line">%quickref  # 示例</div><div class="line"></div><div class="line">%hist  # 输入历史</div><div class="line"></div><div class="line">%timeit  # 自动循环n次返回时间统计</div><div class="line"></div><div class="line">%pdb  # 打开调试</div><div class="line"></div><div class="line">%run  # 载入指定脚本</div><div class="line"></div><div class="line">foo??  # 查看函数源码</div></pre></td></tr></table></figure>
+<h3 id="调试环境"><a href="#调试环境" class="headerlink" title="调试环境:"></a>调试环境:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">virtualenv:</div><div class="line">source ./bin/activate # 启动虚拟环境</div><div class="line">deactivate  # 退出虚拟环境</div><div class="line"></div><div class="line">pip与ipython的匹配:</div><div class="line">python2 安装 python-pip</div><div class="line">python3 安装 python3-pip</div><div class="line">py2 执行 ipython</div><div class="line">py3 执行 ipython3</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="inux-命令-代码环境优化-shell-vim-tmux"><a href="#inux-命令-代码环境优化-shell-vim-tmux" class="headerlink" title="inux(命令,代码环境优化,shell,vim,tmux)"></a>inux(命令,代码环境优化,shell,vim,tmux)</h1><h2 id="linux"><a href="#linux" class="headerlink" title="linux:"></a>linux:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">&amp;,Ctrl-Z,Ctrl-C,jobs,fg,bg,kill 任务管理操作,前后台切换等</div><div class="line">ls, ls-l, less, head, tail, tail -f, ln, ln -s, chmod, chown, du, du -skh *, df, mount 基本文件管理命令</div><div class="line">awk, sed, gred 简单的数据处理</div><div class="line">ipconfig, ifconfig, dig 基本网络管理命令</div><div class="line">lsof, rsyslog 使用</div><div class="line">crontab 定时任务</div><div class="line">xargs</div><div class="line">uname -a</div><div class="line">echo $PATH 显示环境变量</div><div class="line">atp-get source XX 下载XX的源码</div><div class="line">ln -s 创建符号链接</div><div class="line">ctrl+alt+T 打开终端　ctrl+alt+Q 关闭终端</div><div class="line">ctrl+s 暂停屏幕输出　q 继续,在大量输出不容易结束时配合ctrl+c</div><div class="line">ctrl+r 在历史命令中搜索</div><div class="line">ctrl+w 删除光标前的最后一个单词</div><div class="line">ctrl+u 在命令行提示符下删除最后一行内容</div><div class="line">ctrl+win+D 显示桌面</div><div class="line">ctrl+page_up/page_down 多标签切换(浏览器和Terminator适用)</div><div class="line">win+i 在Terminator下会新建命令行窗口</div><div class="line">wc 打印行数,单词数,比特数</div><div class="line">egrep -w &apos;warning|error|critical&apos; /var/log/messages 正则匹配搜索</div><div class="line">grep -a -B 10 -A 100 &apos;XXX&apos; /dev/sda1 &gt; tmp.txt 可用于文件恢复 关键词 存储磁盘 输出范围</div><div class="line">pstree -p 打印进程树</div><div class="line">kill -- -pid 杀掉整个进程树</div><div class="line">/etc/passwd 配置了用户的主目录</div><div class="line">/etc/group 用户组配置</div><div class="line">/etc/sudoers 有sudo权限的用户</div><div class="line">/etc/services 包含这台机器提供的服务以及它们的知名端口号的综合列表</div><div class="line">less -N 显示行号</div><div class="line">multitail 同时监控多个文件</div><div class="line">ssh -qTfnN -D 7070 root@xxx.xxx.xxx.xxx 与远程主机建立ssh隧道,映射到本机的7070端口</div></pre></td></tr></table></figure>
+<h2 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu:"></a>Ubuntu:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">显示桌面：ctrl+super+D</div><div class="line">启动快速搜索界面：alt + F2</div><div class="line">快速进入左边栏： alt + F1</div><div class="line">启动Terminal：Ctrl+Alt+T</div><div class="line"></div><div class="line">Ctrl+Super快捷键：</div><div class="line">Ctrl+Super+Up 键：最大化当前窗口</div><div class="line">Ctrl+Super+Down键：最小化当前窗口</div><div class="line">Ctrl+Super+D：最小化所有窗口</div><div class="line">Ctrl+Super+Left：半最大化当前窗口（左边）</div><div class="line">Ctrl+Super+Right：半最大化当前窗口（右边）</div><div class="line"></div><div class="line">Alt+F7 –移动当前窗口（可以使用键盘或鼠标移动）</div></pre></td></tr></table></figure>
+<h2 id="sublime"><a href="#sublime" class="headerlink" title="sublime:"></a>sublime:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">分屏 alt + shift + 数字键</div><div class="line">alt+F3 全选同一字段</div></pre></td></tr></table></figure>
+<h2 id="tmux"><a href="#tmux" class="headerlink" title="tmux:"></a>tmux:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">tmux att 接入上次session</div><div class="line">c-b + [ 查看历史输出</div><div class="line">c-b + d 将当前session转入后台运行</div><div class="line">c-b + s 切换session</div><div class="line">ctrl+d 关闭某一session</div><div class="line">c-b + ? 查看使用帮助</div><div class="line">C-b + % 横向分Terminal</div><div class="line">C-b + &quot; 纵向分Terminal</div><div class="line">C-b + $ 重命名当前的会话</div></pre></td></tr></table></figure>
+<h2 id="vim"><a href="#vim" class="headerlink" title="vim:"></a>vim:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">1,10d 删除1-10行</div><div class="line">10== 重复10次上一操作</div><div class="line">cw 替换从光标所在位置到后一个单词结尾的字符</div><div class="line">:saveas 另存为</div><div class="line">:e 打开文件</div><div class="line">:saveas 另存为</div><div class="line">:bn 和 :bp 和 :n 上一个和下一个文件</div><div class="line">大写U可撤销一行内的所有改动</div><div class="line">0 移动到行首</div><div class="line">$ 移动到行尾</div><div class="line">% 匹配括号移动，包括 (, &#123;, [.</div><div class="line">* 和 # 匹配光标当前所在的单词，移动光标到下一个（或上一个）匹配单词（*是下一个，#是上一个）</div><div class="line">ctrl+G 显示文件名和当前编辑的行号</div><div class="line">ctrl+R redo</div><div class="line">ctrl+P 自动补全功能</div><div class="line">注释和取消注释多行文本</div><div class="line">/ 从当前位置向后查找    ? 从当前位置向前查找    n/N 顺向/逆向下一个</div><div class="line"></div><div class="line"></div><div class="line">vimdiff</div><div class="line">]c 下一个diff点</div><div class="line">[c 上一个diff点</div><div class="line">n]c 下n个diff点</div><div class="line">dp 把当前文件的差异复制到另一文件中</div><div class="line">do 把另一文件差异复制到当前文件</div><div class="line">zo 打开折叠代码</div><div class="line">zc 折叠代码</div><div class="line">ctrl+r/w 两文件来回切换</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="git下常用命令"><a href="#git下常用命令" class="headerlink" title="git下常用命令"></a>git下常用命令</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">git reset --hard HEAD^</div><div class="line">git reset --hard (commit id)</div><div class="line">git show HEAD</div><div class="line">git remote -v</div><div class="line">git remote add origin XX</div><div class="line">git remote show (remote) 获得远程分支的更多信息</div><div class="line">git branch -d</div><div class="line">git branch -r</div><div class="line">git branch --set-upstream loc-branch-name origin/branch-name</div><div class="line">git branch -m origain_name new_name 重命名分支</div><div class="line">git stash apply stash@&#123;0&#125;</div><div class="line">git fetch 更新远程仓库或者抓取远程仓库的子集</div><div class="line">git checkout --track origin/XX 使用fetch先更新线上子集,然后再创建分支</div><div class="line">git tag v1.0</div><div class="line">git config --global alias.xx &apos;xxx&apos;</div><div class="line">git merge --no-commit --squash XX</div><div class="line">git diff HEAD HEAD~n</div><div class="line">git ci --amend 追加到上一条</div><div class="line">git diff --staged 查看已暂存和上次提交之间的差异</div><div class="line">tar cJf.tar.xz/ --exclude-vcs 将项目打成tar包并排除.git目录</div><div class="line">git blame 查找修改者(每一行都有标记)</div><div class="line">git commit --amend -m &quot;XXX&quot;  修改最后一次提交的信息和修改</div><div class="line">git push remote branch --force 强制更改远程提交,配合上一条使用</div><div class="line">git clone 不支持断点续传 可以init个新项目然后使用git fetch --depth=1下个最后两次更新版本,然后再使用git fetch --unshallow更新</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="服务相关-nginx-redis-mongodb-mysql-docker"><a href="#服务相关-nginx-redis-mongodb-mysql-docker" class="headerlink" title="服务相关(nginx,redis,mongodb,mysql,docker)"></a>服务相关(nginx,redis,mongodb,mysql,docker)</h1><hr>
+<h1 id="算法相关-寻路-排序-动态规划-DFS-BFS-Dijkstra"><a href="#算法相关-寻路-排序-动态规划-DFS-BFS-Dijkstra" class="headerlink" title="算法相关(寻路,排序,动态规划,DFS,BFS,Dijkstra)"></a>算法相关(寻路,排序,动态规划,DFS,BFS,Dijkstra)</h1><p>python快排:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">def quick_sort(lst):</div><div class="line">    if len(lst) &lt;= 1:</div><div class="line">        return lst</div><div class="line">    else:</div><div class="line">        pivot = lst[0]</div><div class="line">        return quick_sort([x for x in lst[1:] if x &lt; pivot]) + [pivot] + quick_sort([y for y in lst[1:] if y &gt;= pivot])</div></pre></td></tr></table></figure></p>
+<p>DFS:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Definition for a binary tree node.</div><div class="line"># class TreeNode:</div><div class="line">#     def __init__(self, x):</div><div class="line">#         self.val = x</div><div class="line">#         self.left = None</div><div class="line">#         self.right = None</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line"># Leetcode上257题Binary Tree Paths的高票答案</div><div class="line"># dfs + stack</div><div class="line">def binaryTreePaths1(self, root):</div><div class="line">    if not root:</div><div class="line">        return []</div><div class="line">    res, stack = [], [(root, &quot;&quot;)]</div><div class="line">    while stack:</div><div class="line">        node, ls = stack.pop()</div><div class="line">        if not node.left and not node.right:</div><div class="line">            res.append(ls+str(node.val))</div><div class="line">        if node.right:</div><div class="line">            stack.append((node.right, ls+str(node.val)+&quot;-&gt;&quot;))</div><div class="line">        if node.left:</div><div class="line">            stack.append((node.left, ls+str(node.val)+&quot;-&gt;&quot;))</div><div class="line">    return res</div><div class="line"></div><div class="line"># bfs + queue</div><div class="line">def binaryTreePaths2(self, root):</div><div class="line">    if not root:</div><div class="line">        return []</div><div class="line">    res, queue = [], collections.deque([(root, &quot;&quot;)])</div><div class="line">    while queue:</div><div class="line">        node, ls = queue.popleft()</div><div class="line">        if not node.left and not node.right:</div><div class="line">            res.append(ls+str(node.val))</div><div class="line">        if node.left:</div><div class="line">            queue.append((node.left, ls+str(node.val)+&quot;-&gt;&quot;))</div><div class="line">        if node.right:</div><div class="line">            queue.append((node.right, ls+str(node.val)+&quot;-&gt;&quot;))</div><div class="line">    return res</div><div class="line"></div><div class="line"># dfs recursively</div><div class="line">def binaryTreePaths(self, root):</div><div class="line">    if not root:</div><div class="line">        return []</div><div class="line">    res = []</div><div class="line">    self.dfs(root, &quot;&quot;, res)</div><div class="line">    return res</div><div class="line"></div><div class="line">def dfs(self, root, ls, res):</div><div class="line">    if not root.left and not root.right:</div><div class="line">        res.append(ls+str(root.val))</div><div class="line">    if root.left:</div><div class="line">        self.dfs(root.left, ls+str(root.val)+&quot;-&gt;&quot;, res)</div><div class="line">    if root.right:</div><div class="line">        self.dfs(root.right, ls+str(root.val)+&quot;-&gt;&quot;, res)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"># 易懂答案</div><div class="line">class Solution:</div><div class="line">    def binaryTreePaths(self, root):</div><div class="line">        if not root:</div><div class="line">            return []　# 整棵树为空</div><div class="line"></div><div class="line">        if not root.left and not root.right:</div><div class="line">            return [str(root.val)] # leaf节点</div><div class="line"></div><div class="line">        leftPathToLeaf = self.binaryTreePaths(root.left)</div><div class="line">        rightPathToLeaf = self.binaryTreePaths(root.right)</div><div class="line"></div><div class="line">        left = [str(root.val)+ (&quot;-&gt;&quot;+lpath ) for lpath in leftPathToLeaf]</div><div class="line">        right = [str(root.val)+ (&quot;-&gt;&quot;+rpath) for rpath in rightPathToLeaf]</div><div class="line">        return left+right</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="latex-markdown"><a href="#latex-markdown" class="headerlink" title="latex,markdown"></a>latex,markdown</h1><hr>
+<h1 id="设计模式-部分内容直接从小明明s的blog直接搬过来"><a href="#设计模式-部分内容直接从小明明s的blog直接搬过来" class="headerlink" title="设计模式(部分内容直接从小明明s的blog直接搬过来)"></a>设计模式(部分内容直接从小明明s的blog直接搬过来)</h1><p><strong>1/观察者模式</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div></pre></td><td class="code"><pre><div class="line"># 这个是观察者基类</div><div class="line">class Subject(object):</div><div class="line">    def __init__(self):</div><div class="line">        self._observers = []</div><div class="line"></div><div class="line">    # 添加依赖的对象</div><div class="line">    def attach(self, observer):</div><div class="line">        if not observer in self._observers:</div><div class="line">            self._observers.append(observer)</div><div class="line"></div><div class="line">    # 取消添加</div><div class="line">    def detach(self, observer):</div><div class="line">        try:</div><div class="line">            self._observers.remove(observer)</div><div class="line">        except ValueError:</div><div class="line">            pass</div><div class="line"></div><div class="line">    # 这里只是通知上面注册的依赖对象新的变化</div><div class="line">    def notify(self, modifier=None):</div><div class="line">        for observer in self._observers:</div><div class="line">            # 可以设置过滤条件，对不符合过滤条件的更新</div><div class="line">            if modifier != observer:</div><div class="line">                observer.update(self)</div><div class="line"></div><div class="line"></div><div class="line"># 观察者类</div><div class="line">class Data(Subject):</div><div class="line">    def __init__(self, name=&apos;&apos;):</div><div class="line">        super(Data, self).__init__()</div><div class="line">        self.name = name</div><div class="line">        self._data = 0</div><div class="line"></div><div class="line">    # python2.6新增的写法,获取属性为property，设置属性为(假设属性名字为x)@x.setter,删除为@x.deleter</div><div class="line">    @property</div><div class="line">    def data(self):</div><div class="line">        return self._data</div><div class="line"></div><div class="line">    @data.setter</div><div class="line">    def data(self, value):</div><div class="line">        self._data = value</div><div class="line">        self.notify()</div><div class="line"></div><div class="line"># 这里有2个被观察者，也就是依赖的对象，每次Data有改变，这2个view都会变动</div><div class="line">class HexViewer(object):</div><div class="line">    def update(self, subject):</div><div class="line">        print &apos;HexViewer: Subject %s has data 0x%x&apos; % (subject.name, subject.data)</div><div class="line"></div><div class="line">class DecimalViewer(object):</div><div class="line">    def update(self, subject):</div><div class="line">        print &apos;DecimalViewer: Subject %s has data %d&apos; % (subject.name, subject.data)</div><div class="line"></div><div class="line"></div><div class="line">if __name__ == &apos;__main__&apos;:</div><div class="line"></div><div class="line">    data1 = Data(&apos;Data 1&apos;)</div><div class="line">    data2 = Data(&apos;Data 2&apos;)</div><div class="line">    view1 = DecimalViewer()</div><div class="line">    view2 = HexViewer()</div><div class="line">    data1.attach(view1)</div><div class="line">    data1.attach(view2)</div><div class="line">    data2.attach(view2)</div><div class="line">    data2.attach(view1)</div><div class="line"></div><div class="line">    print &quot;Setting Data 1 = 10&quot;</div><div class="line">    data1.data = 10</div><div class="line">    print &quot;Setting Data 2 = 15&quot;</div><div class="line">    data2.data = 15</div><div class="line">    print &quot;Setting Data 1 = 3&quot;</div><div class="line">    data1.data = 3</div><div class="line">    print &quot;Setting Data 2 = 5&quot;</div><div class="line">    data2.data = 5</div><div class="line">    print &quot;Update data1&apos;s view2 Because view1 is be filtered&quot;</div><div class="line">    data1.notify(modifier=view1)</div><div class="line">    print &quot;Detach HexViewer from data1 and data2.&quot;</div><div class="line">    data1.detach(view2)</div><div class="line">    data2.detach(view2)</div><div class="line">    print &quot;Setting Data 1 = 10&quot;</div><div class="line">    data1.data = 10</div><div class="line">    print &quot;Setting Data 2 = 15&quot;</div><div class="line">    data2.data = 15</div></pre></td></tr></table></figure></p>
+<p><strong>2/装饰者模式</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">class Dog(object):</div><div class="line">    def __init__(self, name):</div><div class="line">        self.name = name</div><div class="line">    def bark(self):</div><div class="line">        return &quot;wangwang&quot;</div><div class="line"></div><div class="line">class Cat(object):</div><div class="line">    def __init__(self, name):</div><div class="line">        self.name = name</div><div class="line">    def meow(self):</div><div class="line">        return &quot;meow&quot;</div><div class="line"></div><div class="line">class AnimalAdapter(object):</div><div class="line">    def __init__(self, animal, make_noise):</div><div class="line">        self.animal = animal</div><div class="line">        self.make_noise = make_noise</div><div class="line"></div><div class="line">    def __getattr__(self, attr):</div><div class="line">        return getattr(self.animal, attr)</div><div class="line"></div><div class="line">if __name__ == &apos;__main__&apos;:</div><div class="line">    fido = Dog(&quot;Fido&quot;)</div><div class="line">    # 都是这个适应类帮助你转换，怎么转换是你设计好的，他只是个模式</div><div class="line">    canine = AnimalAdapter(fido, fido.bark)</div><div class="line">    whiskers = Cat(&quot;Whiskers&quot;)</div><div class="line">    feline = AnimalAdapter(whiskers, whiskers.meow)</div><div class="line"></div><div class="line">    for i in (canine, feline):</div><div class="line">        print i.name, &apos;says:&apos;, i.make_noise()</div></pre></td></tr></table></figure></p>
+<p><strong>3/工厂模式</strong><br><strong>4/单件模式</strong><br><strong>5/命令模式</strong><br><strong>6/适配器与外观模式</strong><br><strong>7/模板方法模式</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div></pre></td><td class="code"><pre><div class="line"># 整个例子我们要根据不同需求处理的内容</div><div class="line">ingredients = &quot;spam eggs apple&quot;</div><div class="line">line = &apos;-&apos; * 10</div><div class="line"></div><div class="line"># 这是被模板方法调用的基础函数</div><div class="line">def iter_elements(getter, action):</div><div class="line">    &quot;&quot;&quot;循环处理的骨架&quot;&quot;&quot;</div><div class="line">    # getter是要迭代的数据，action是要执行的函数</div><div class="line">    for element in getter():</div><div class="line">        action(element)</div><div class="line">        print(line)</div><div class="line"></div><div class="line">def rev_elements(getter, action):</div><div class="line">    &quot;&quot;&quot;反向的&quot;&quot;&quot;</div><div class="line">    for element in getter()[::-1]:</div><div class="line">        action(element)</div><div class="line">        print(line)</div><div class="line"></div><div class="line"># 数据经过函数处理就是我们最后传给模板的内容</div><div class="line">def get_list():</div><div class="line">    return ingredients.split()</div><div class="line"></div><div class="line"># 同上</div><div class="line">def get_lists():</div><div class="line">    return [list(x) for x in ingredients.split()]</div><div class="line"></div><div class="line"># 对数据的操作</div><div class="line">def print_item(item):</div><div class="line">    print(item)</div><div class="line">#反向处理数据</div><div class="line">def reverse_item(item):</div><div class="line">    print(item[::-1])</div><div class="line"></div><div class="line"># 模板函数</div><div class="line">def make_template(skeleton, getter, action):</div><div class="line">    # 它抽象的传入了 骨架，数据，和子类的操作函数</div><div class="line">    def template():</div><div class="line">        skeleton(getter, action)</div><div class="line">    return template</div><div class="line"></div><div class="line"># 列表解析，数据就是前面的2种骨架(定义怎么样迭代)，2个分割数据的函数，正反向打印数据的组合</div><div class="line">templates = [make_template(s, g, a)</div><div class="line">            for g in (get_list, get_lists)</div><div class="line">            for a in (print_item, reverse_item)</div><div class="line">            for s in (iter_elements, rev_elements)]</div><div class="line"></div><div class="line"># 执行</div><div class="line">for template in templates:</div><div class="line">    template()</div></pre></td></tr></table></figure></p>
+<p><strong>8/迭代器与组合模式</strong><br><strong>9/状态模式</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line">class NetworkCardState:</div><div class="line">    &quot;&quot;&quot;基类&quot;&quot;&quot;</div><div class="line">    def send(self):</div><div class="line">        raise NotImplementedError</div><div class="line"></div><div class="line">    def receive(self):</div><div class="line">        raise NotImplementedError</div><div class="line"></div><div class="line">class Online(NetworkCardState):</div><div class="line">    &quot;&quot;&quot;在线&quot;&quot;&quot;</div><div class="line">    def send(self):</div><div class="line">        print &quot;sending Data&quot;</div><div class="line"></div><div class="line">    def receive(self):</div><div class="line">        print &quot;receiving Data&quot;</div><div class="line"></div><div class="line">class Offline(NetworkCardState):</div><div class="line">    &quot;&quot;&quot;离线&quot;&quot;&quot;</div><div class="line">    def send(self):</div><div class="line">        print &quot;cannot send...Offline&quot;</div><div class="line"></div><div class="line">    def receive(self):</div><div class="line">        print &quot;cannot receive...Offline&quot;</div><div class="line"></div><div class="line">class NetworkCard:</div><div class="line">    def __init__(self):</div><div class="line">        self.online = Online()</div><div class="line">        self.offline = Offline()</div><div class="line">        # 修改内部属性currentState，默认是离线，直接传入类</div><div class="line">        self.currentState = self.offline</div><div class="line"></div><div class="line">    def startConnection(self):</div><div class="line">        # 修改状态成在线</div><div class="line">        self.currentState = self.online</div><div class="line"></div><div class="line">    def stopConnection(self):</div><div class="line">        self.currentState = self.offline</div><div class="line"></div><div class="line">    def send(self):</div><div class="line">        # 去掉用这个可变的属性的方法，达到看起来是操作了类的属性的改变</div><div class="line">        self.currentState.send()</div><div class="line"></div><div class="line">    def receive(self):</div><div class="line">        self.currentState.receive()</div><div class="line"></div><div class="line">def main():</div><div class="line">    myNetworkCard = NetworkCard()</div><div class="line">    print &quot;without connection:&quot;</div><div class="line">    myNetworkCard.send()</div><div class="line">    myNetworkCard.receive()</div><div class="line">    print &quot;starting connection&quot;</div><div class="line">    myNetworkCard.startConnection()</div><div class="line">    myNetworkCard.send()</div><div class="line">    myNetworkCard.receive()</div><div class="line"></div><div class="line">if __name__ == &apos;__main__&apos;:</div><div class="line">    main()</div></pre></td></tr></table></figure></p>
+<p><strong>10/代理模式</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">class Proxy(object):</div><div class="line">    def __init__(self, subject):</div><div class="line">        self.__subject = subject</div><div class="line">    # 代理其实本质上就是属性的委托</div><div class="line">    def __getattr__(self, name):</div><div class="line">        return getattr(self.__subject, name)</div><div class="line"></div><div class="line">class RGB:</div><div class="line">    def __init__(self, red, green, blue):</div><div class="line">        self.__red = red</div><div class="line">        self.__green = green</div><div class="line">        self.__blue = blue</div><div class="line">    def Red(self):</div><div class="line">        return self.__red</div><div class="line">    def Green(self):</div><div class="line">        return self.__green</div><div class="line">    def Blue(self):</div><div class="line">        return self.__blue</div><div class="line"></div><div class="line">class NoBlueProxy(Proxy):</div><div class="line">    # 我在这个子代理类拦截了blue的访问，这样就不会返回被代理的类的Blue属性</div><div class="line">    def Blue(self):</div><div class="line">        return 0</div><div class="line"></div><div class="line">if __name__ == &apos;__main__&apos;:</div><div class="line">    rgb = RGB(100, 192, 240)</div><div class="line">    print rgb.Red()</div><div class="line">    proxy = Proxy(rgb)</div><div class="line">    print proxy.Green()</div><div class="line">    noblue = NoBlueProxy(rgb)</div><div class="line">    print noblue.Green()</div><div class="line">    print noblue.Blue()</div></pre></td></tr></table></figure></p>
+<p><strong>11/复合模式</strong><br><strong>12/访问者模式</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"># 轮子,引擎, 车身这些定义好了都不需要变动</div><div class="line">class Wheel:</div><div class="line">    def __init__(self, name):</div><div class="line">        self.name = name</div><div class="line">    def accept(self, visitor):</div><div class="line">        # 每个visitor是同样的，但是其中的方法是不一样的，比如这里是visitWheel，</div><div class="line">        # 然后传入了self，想想？他其实想做什么就能做什么</div><div class="line">        visitor.visitWheel(self)</div><div class="line"></div><div class="line">class Engine:</div><div class="line">    def accept(self, visitor):</div><div class="line">        visitor.visitEngine(self)</div><div class="line"></div><div class="line">class Body:</div><div class="line">    def accept(self, visitor):</div><div class="line">        visitor.visitBody(self)</div><div class="line"></div><div class="line"># 我们要组合成车</div><div class="line">class Car:</div><div class="line">    def __init__(self):</div><div class="line">        self.engine = Engine()</div><div class="line">        self.body   = Body()</div><div class="line">        self.wheels = [ Wheel(&quot;front left&quot;), Wheel(&quot;front right&quot;),</div><div class="line">                        Wheel(&quot;back left&quot;) , Wheel(&quot;back right&quot;) ]</div><div class="line"></div><div class="line">    # 这个也不需要在动，他只是上面部件的组合，只是做了属性的委托</div><div class="line">    def accept(self,visitor):</div><div class="line">        visitor.visitCar(self)</div><div class="line">        self.engine.accept(visitor)</div><div class="line">        self.body.accept(visitor)</div><div class="line">        for wheel in self.wheels:</div><div class="line">            wheel.accept(visitor)</div><div class="line"></div><div class="line"># 这个才是我们的访问者，每次的修改都在这里面</div><div class="line">class PrintVisitor:</div><div class="line">    def visitWheel(self, wheel):</div><div class="line">        print &quot;Visiting &quot;+wheel.name+&quot; wheel&quot;</div><div class="line">    def visitEngine(self, engine):</div><div class="line">        print &quot;Visiting engine&quot;</div><div class="line">    def visitBody(self, body):</div><div class="line">        print &quot;Visiting body&quot;</div><div class="line">    def visitCar(self, car):</div><div class="line">        print &quot;Visiting car&quot;</div><div class="line"></div><div class="line">if __name__ == &apos;__main__&apos;:</div><div class="line">    car = Car()</div><div class="line">    visitor = PrintVisitor()</div><div class="line">    car.accept(visitor)</div></pre></td></tr></table></figure></p>
+<p><strong>13/备忘录模式(表单验证失败时做恢复)</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div></pre></td><td class="code"><pre><div class="line">import copy</div><div class="line"></div><div class="line">def Memento(obj, deep=False):</div><div class="line"></div><div class="line">    # 对你要做快照的对象做快照</div><div class="line">    state = (copy.copy if deep else copy.deepcopy)(obj.__dict__)</div><div class="line">    def Restore():</div><div class="line">        obj.__dict__ = state</div><div class="line">    return Restore</div><div class="line"></div><div class="line">class Transaction:</div><div class="line"></div><div class="line">    deep = False</div><div class="line">    def __init__(self, *targets):</div><div class="line">        self.targets = targets</div><div class="line">        self.Commit()</div><div class="line">    # 模拟事务提交，其实就是初始化给每个对象往self.targets赋值</div><div class="line">    def Commit(self):</div><div class="line">        self.states = [Memento(target, self.deep) for target in self.targets]</div><div class="line">    # 回滚其实就是调用Memento函数，执行其中的闭包，将__dict__恢复</div><div class="line">    def Rollback(self):</div><div class="line">        for state in self.states:</div><div class="line">            state()</div><div class="line"></div><div class="line"># 装饰器的方式给方法添加这个事务的功能</div><div class="line">def transactional(method):</div><div class="line">    # 这里的self其实就是要保存的那个对象，和类的实例无关</div><div class="line">    def wrappedMethod(self, *args, **kwargs):</div><div class="line">        state = Memento(self)</div><div class="line">        try:</div><div class="line">            return method(self, *args, **kwargs)</div><div class="line">        except:</div><div class="line">            # 和上面的回滚一样，异常就恢复</div><div class="line">            state()</div><div class="line">            raise</div><div class="line">    return wrappedMethod</div><div class="line"></div><div class="line">class NumObj(object):</div><div class="line">    def __init__(self, value):</div><div class="line">        self.value = value</div><div class="line">    def __repr__(self):</div><div class="line">        return &apos;&lt;%s: %r&gt;&apos; % (self.__class__.__name__, self.value)</div><div class="line">    def Increment(self):</div><div class="line">        self.value += 1</div><div class="line"></div><div class="line">    @transactional</div><div class="line">    def DoStuff(self):</div><div class="line">        # 赋值成字符串，再自增长肯定会报错的</div><div class="line">        self.value = &apos;1111&apos;</div><div class="line">        self.Increment()</div><div class="line"></div><div class="line">if __name__ == &apos;__main__&apos;:</div><div class="line"></div><div class="line">    n = NumObj(-1)</div><div class="line">    print n</div><div class="line">    t = Transaction(n)</div><div class="line">    try:</div><div class="line">        for i in range(3):</div><div class="line">            n.Increment()</div><div class="line">            print n</div><div class="line">        # 这里事务提交会保存状态从第一次的-1到2</div><div class="line">        t.Commit()</div><div class="line">        print &apos;-- commited&apos;</div><div class="line">        for i in range(3):</div><div class="line">            n.Increment()</div><div class="line">            print n</div><div class="line">        n.value += &apos;x&apos; # will fail</div><div class="line">        print n</div><div class="line">    except:</div><div class="line">        # 回滚只会回顾到上一次comit成功的2 而不是-1</div><div class="line">        t.Rollback()</div><div class="line">        print &apos;-- rolled back&apos;</div><div class="line">    print n</div><div class="line">    print &apos;-- now doing stuff ...&apos;</div><div class="line">    try:</div><div class="line">        n.DoStuff()</div><div class="line">    except:</div><div class="line">        print &apos;-&gt; doing stuff failed!&apos;</div><div class="line">        import traceback</div><div class="line">        traceback.print_exc(0)</div><div class="line">        pass</div><div class="line">    # 第二次的异常回滚n还是2, 整个过程都是修改NumObj的实例对象</div><div class="line">    print n</div></pre></td></tr></table></figure></p>
+<p><strong>14/策略模式(通过对象组合的方式,让客户可以选择算法实现)</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">class Duck(object):</div><div class="line">    # 上面使用继承，这里通用的使用参数方式，传入的就是操作工厂的类</div><div class="line">    def __init__(self, strategy=None):</div><div class="line">        self.action = None</div><div class="line">        self.count = 0</div><div class="line">        if strategy:</div><div class="line">            # 指定策略，那么执行action就是用这个类的实例</div><div class="line">            self.action = strategy()</div><div class="line"></div><div class="line">    def fly(self, kind):</div><div class="line">        if self.action:</div><div class="line">            self.count += 1</div><div class="line">            # 这里的第二个参数self，算是炫技吧，就是为了让操作的方法获得这里计算好的count</div><div class="line">            return self.action.fly(kind, self)</div><div class="line"></div><div class="line">        else:</div><div class="line">            raise UnboundLocalError(&apos;Exception raised, no strategyClass supplied to Duck!&apos;)</div><div class="line"></div><div class="line"># 注意这里没有继承Duck，因为是以参数的方式传入类名</div><div class="line">class Duck1(object):</div><div class="line"></div><div class="line">    def fly(self, kind, instance):</div><div class="line">        return &apos;Duck1 fly kind: &apos; + kind + &apos;#&apos; + str(instance.count)</div><div class="line"></div><div class="line"></div><div class="line">class Duck2(object):</div><div class="line"></div><div class="line">    def fly(self, kind, instance):</div><div class="line">        return &apos;Duck2 fly kind: &apos; + kind + &apos;#&apos; + str(instance.count)</div><div class="line"></div><div class="line"></div><div class="line">if __name__ == &apos;__main__&apos;:</div><div class="line">    duckfly = Duck()</div><div class="line">    duck1fly = Duck(strategy=Duck1)</div><div class="line">    duck2fly = Duck(strategy=Duck2)</div><div class="line"></div><div class="line">    try:</div><div class="line">        print duckfly.fly(&apos;yes&apos;)</div><div class="line">    except Exception as e:</div><div class="line">        print &quot;The following exception was expected:&quot;</div><div class="line">        print e</div><div class="line"></div><div class="line">    print duck1fly.fly(&apos;yes&apos;)</div><div class="line">    print duck1fly.fly(&apos;no&apos;)</div><div class="line">    print duck1fly.fly(&apos;yes&apos;)</div><div class="line">    print duck2fly.fly(&apos;yes&apos;)</div><div class="line">    print duck2fly.fly(&apos;no&apos;)</div></pre></td></tr></table></figure></p>
+<p><strong>15/对象池模式</strong><br><strong>16/Null模式</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div></pre></td><td class="code"><pre><div class="line">class A(object):</div><div class="line">    pass</div><div class="line"></div><div class="line">class B(object):</div><div class="line">    b = 1</div><div class="line">    @classmethod</div><div class="line">    def test(cls):</div><div class="line">        print cls.b</div><div class="line"></div><div class="line">class Null(object):</div><div class="line"></div><div class="line">    def __init__(self, *args, **kwargs):</div><div class="line">        &apos;&apos;&apos;忽略参数&apos;&apos;&apos;</div><div class="line">        return None</div><div class="line"></div><div class="line">    def __call__(self, *args, **kwargs):</div><div class="line">        &apos;&apos;&apos;忽略实例调用&apos;&apos;&apos;</div><div class="line">        return self</div><div class="line"></div><div class="line">    def __getattr__(self, mname):</div><div class="line">        &apos;&apos;&apos;忽略属性获得&apos;&apos;&apos;</div><div class="line">        return self</div><div class="line"></div><div class="line">    def __setattr__(self, name, value):</div><div class="line">        &apos;&apos;&apos;忽略设置属性操作&apos;&apos;&apos;</div><div class="line">        return self</div><div class="line"></div><div class="line">    def __delattr__(self, name):</div><div class="line">        &apos;&apos;&apos;忽略删除属性操作&apos;&apos;&apos;</div><div class="line">        return self</div><div class="line"></div><div class="line">    def __repr__(self):</div><div class="line">        return &quot;&lt;Null&gt;&quot;</div><div class="line"></div><div class="line">    def __str__(self):</div><div class="line">        return &quot;Null&quot;</div><div class="line"></div><div class="line">def get_test_with_null(x):</div><div class="line">    try:</div><div class="line">        return x.test</div><div class="line">    # 异常处理返回Null类</div><div class="line">    except AttributeError:</div><div class="line">        return Null()  # 这里返回的是一个类!!</div><div class="line"></div><div class="line">for i in [A, B]:</div><div class="line">    # 直接调用了，不需要判断</div><div class="line">    get_test_with_null(i)()</div></pre></td></tr></table></figure></p>
+<p><strong>17/组合模式</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div></pre></td><td class="code"><pre><div class="line">class Trunk(object):</div><div class="line">    &apos;&apos;&apos;树干&apos;&apos;&apos;</div><div class="line">    def __str__(self):</div><div class="line">        pass</div><div class="line"></div><div class="line">    def subtree(self):</div><div class="line">        pass</div><div class="line"></div><div class="line">class Composite(Trunk):</div><div class="line">    def __init__(self, left=None, right=None, length=None):</div><div class="line">        self.left=left</div><div class="line">        self.right=right</div><div class="line">        self.length=length</div><div class="line"></div><div class="line">    def __str__(self):</div><div class="line">        # 这个结果是在调用subtree()的时候返回</div><div class="line">        if self.length:</div><div class="line">            return &quot;(&quot; + self.left.__str__() + &quot;, &quot; + self.right.__str__() + &quot;)&quot; + &quot;: &quot; + str(self.length)</div><div class="line">        else:</div><div class="line">            return &quot;(&quot; + self.left.__str__() + &quot;, &quot; + self.right.__str__() + &quot;)&quot;</div><div class="line"></div><div class="line">    # 这里其实就是一个技巧，通过这个函数返回下一级的对象，也就是它既是对象还可以是对象的容器</div><div class="line">    def subtree(self):</div><div class="line">        return Composite(self.left, self.right)</div><div class="line"></div><div class="line">class Leaf(Trunk):</div><div class="line">    &apos;&apos;&apos;叶子类，它没办法继续延伸了&apos;&apos;&apos;</div><div class="line">    def __init__(self, name, length=None):</div><div class="line">        self.name = name</div><div class="line">        self.length=length</div><div class="line">        self.left = None</div><div class="line">        self.right = None</div><div class="line"></div><div class="line">    def __str__(self):</div><div class="line">        return self.name + &quot;: &quot; + str(self.length)</div><div class="line"></div><div class="line">    def subtree(self):</div><div class="line">        return Leaf(self.name, self.length)</div><div class="line"></div><div class="line"></div><div class="line">if __name__ == &quot;__main__&quot;:</div><div class="line">    # 只有叶子那么就直接返回__str__的拼装结果</div><div class="line">    t1 = Leaf(&apos;A&apos;, 0.71399)</div><div class="line">    print t1</div><div class="line">    # 有个2个叶子的组合，返回的是2个叶子的对象的组合</div><div class="line">    t2 = Composite(Leaf(&apos;B&apos;, -0.00804),</div><div class="line">        Leaf(&apos;C&apos;, 0.07470))</div><div class="line">    print t2</div><div class="line">    # 这个是嵌套的叶子的组合，树干上面有树枝，树枝上面有叶子</div><div class="line">    t3 = Composite(Leaf(&apos;A&apos;, 0.71399),</div><div class="line">        Composite(Leaf(&apos;B&apos;, -0.00804),</div><div class="line">                Leaf(&apos;C&apos;, 0.07470), 0.1533), 0.0666)</div><div class="line"></div><div class="line">    print t3</div><div class="line">    # 直接通过左右节点找到对应的叶子对象了</div><div class="line">    t4 = t3.right.right.subtree()</div><div class="line">    print t4</div><div class="line">    # t3的左树其实就是叶子对象了</div><div class="line">    t5 = t3.left.subtree()</div><div class="line">    print t5</div></pre></td></tr></table></figure></p>
+<hr>
+<h1 id="应用软件中快捷键"><a href="#应用软件中快捷键" class="headerlink" title="应用软件中快捷键"></a>应用软件中快捷键</h1><p><strong>sublime:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">alt+数字 切换打开多个文件</div><div class="line">ctrl+N 新建标签</div><div class="line">alt+shift+2 分屏</div><div class="line">shift+F11 全屏免打扰模式</div><div class="line">ctrl+H 替换快捷键</div><div class="line">ctrl+G 跳转到第n行</div><div class="line">ctrl+W 关闭当前文件</div><div class="line">ctrl+shift+L 在所有行尾插入</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/efficiency/" rel="tag">#efficiency</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/06/16/python中的线程/" rel="next" title="python中的线程">
+                <i class="fa fa-chevron-left"></i> python中的线程
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/03/15/部署jupyter使用python与R/" rel="prev" title="部署jupyter使用python与R">
+                部署jupyter使用python与R <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/02/26/linux下开发常用资源整理/"
+           data-title="linux下开发常用资源整理" data-url="http://yoursite.com/2016/02/26/linux下开发常用资源整理/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://7xjopn.com1.z0.glb.clouddn.com/头像.jpg"
+               alt="LCH" />
+          <p class="site-author-name" itemprop="name">LCH</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">11</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#python-初级-进阶-调试-框架"><span class="nav-number">1.</span> <span class="nav-text">python(初级,进阶,调试,框架)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#初级"><span class="nav-number">1.1.</span> <span class="nav-text">初级:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进阶"><span class="nav-number">1.2.</span> <span class="nav-text">进阶:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调试"><span class="nav-number">1.3.</span> <span class="nav-text">调试:</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ipython魔法方法"><span class="nav-number">1.3.1.</span> <span class="nav-text">ipython魔法方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#调试环境"><span class="nav-number">1.3.2.</span> <span class="nav-text">调试环境:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#inux-命令-代码环境优化-shell-vim-tmux"><span class="nav-number">2.</span> <span class="nav-text">inux(命令,代码环境优化,shell,vim,tmux)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#linux"><span class="nav-number">2.1.</span> <span class="nav-text">linux:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ubuntu"><span class="nav-number">2.2.</span> <span class="nav-text">Ubuntu:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#sublime"><span class="nav-number">2.3.</span> <span class="nav-text">sublime:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#tmux"><span class="nav-number">2.4.</span> <span class="nav-text">tmux:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim"><span class="nav-number">2.5.</span> <span class="nav-text">vim:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#git下常用命令"><span class="nav-number">3.</span> <span class="nav-text">git下常用命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#服务相关-nginx-redis-mongodb-mysql-docker"><span class="nav-number">4.</span> <span class="nav-text">服务相关(nginx,redis,mongodb,mysql,docker)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#算法相关-寻路-排序-动态规划-DFS-BFS-Dijkstra"><span class="nav-number">5.</span> <span class="nav-text">算法相关(寻路,排序,动态规划,DFS,BFS,Dijkstra)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#latex-markdown"><span class="nav-number">6.</span> <span class="nav-text">latex,markdown</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式-部分内容直接从小明明s的blog直接搬过来"><span class="nav-number">7.</span> <span class="nav-text">设计模式(部分内容直接从小明明s的blog直接搬过来)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#应用软件中快捷键"><span class="nav-number">8.</span> <span class="nav-text">应用软件中快捷键</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LCH</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"hilaopo"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("Ct9tcOp1PvP3woRzKRi73ojr-gzGzoHsz", "MxXrwPH9NUo1vNN3nJxoumnr");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>
