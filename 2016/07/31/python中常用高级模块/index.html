@@ -1,0 +1,832 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="module," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="数据结构和算法中常用模块
+Queue 队列对象
+operator 提供各种运算符的操作
+itertools 迭代器工具，提供无穷循环器，函数式工具和组合工具
+collections 提供一些额外的数据类型
+heapq 堆数据结构
+functools 提供partial和wraps
+bisect 维护一个有序列表，包括插入和返回索引
+array 限定只有一种元素类型的列表
+
+数据定义信息常用模块
+k">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python中常用高级模块">
+<meta property="og:url" content="http://yoursite.com/2016/07/31/python中常用高级模块/index.html">
+<meta property="og:site_name" content="Hilaopo">
+<meta property="og:description" content="数据结构和算法中常用模块
+Queue 队列对象
+operator 提供各种运算符的操作
+itertools 迭代器工具，提供无穷循环器，函数式工具和组合工具
+collections 提供一些额外的数据类型
+heapq 堆数据结构
+functools 提供partial和wraps
+bisect 维护一个有序列表，包括插入和返回索引
+array 限定只有一种元素类型的列表
+
+数据定义信息常用模块
+k">
+<meta property="og:updated_time" content="2016-08-01T03:42:08.325Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python中常用高级模块">
+<meta name="twitter:description" content="数据结构和算法中常用模块
+Queue 队列对象
+operator 提供各种运算符的操作
+itertools 迭代器工具，提供无穷循环器，函数式工具和组合工具
+collections 提供一些额外的数据类型
+heapq 堆数据结构
+functools 提供partial和wraps
+bisect 维护一个有序列表，包括插入和返回索引
+array 限定只有一种元素类型的列表
+
+数据定义信息常用模块
+k">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2016/07/31/python中常用高级模块/"/>
+
+  <title> python中常用高级模块 | Hilaopo </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Hilaopo</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                python中常用高级模块
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-31T10:54:29+08:00" content="2016-07-31">
+              2016-07-31
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/python/" itemprop="url" rel="index">
+                    <span itemprop="name">python</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/31/python中常用高级模块/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/31/python中常用高级模块/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/07/31/python中常用高级模块/" class="leancloud_visitors" data-flag-title="python中常用高级模块">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="数据结构和算法中常用模块"><a href="#数据结构和算法中常用模块" class="headerlink" title="数据结构和算法中常用模块"></a>数据结构和算法中常用模块</h2><ul>
+<li>Queue 队列对象</li>
+<li>operator 提供各种运算符的操作</li>
+<li>itertools 迭代器工具，提供无穷循环器，函数式工具和组合工具</li>
+<li>collections 提供一些额外的数据类型</li>
+<li>heapq 堆数据结构</li>
+<li>functools 提供partial和wraps</li>
+<li>bisect 维护一个有序列表，包括插入和返回索引</li>
+<li>array 限定只有一种元素类型的列表</li>
+</ul>
+<h2 id="数据定义信息常用模块"><a href="#数据定义信息常用模块" class="headerlink" title="数据定义信息常用模块"></a>数据定义信息常用模块</h2><ul>
+<li>keyword python中所有的关键字</li>
+<li>types python中所有的类型</li>
+<li>string 提供字母表等</li>
+</ul>
+<h2 id="数学相关"><a href="#数学相关" class="headerlink" title="数学相关"></a>数学相关</h2><ul>
+<li>math 数学相关计算</li>
+<li>decimal 十进制科学计算</li>
+</ul>
+<a id="more"></a>
+<hr>
+<p><strong><strong>数据结构和算法中常用模块</strong></strong></p>
+<p><em>Queue</em><br>多线程共享时使用，先入先出，后入先出，优先级队列<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div></pre></td><td class="code"><pre><div class="line">In [<span class="number">1</span>]: Queue.</div><div class="line">Queue.Empty          Queue.LifoQueue      Queue.Queue          Queue.heapq          </div><div class="line">Queue.Full           Queue.PriorityQueue  Queue.deque          </div><div class="line"></div><div class="line">In [<span class="number">2</span>]: Queue.Queue.</div><div class="line">Queue.Queue.empty       Queue.Queue.get         Queue.Queue.join        Queue.Queue.put_nowait  Queue.Queue.task_done</div><div class="line">Queue.Queue.full        Queue.Queue.get_nowait  Queue.Queue.put         Queue.Queue.qsize       </div><div class="line"></div><div class="line">In [<span class="number">3</span>]: <span class="keyword">from</span> Queue <span class="keyword">import</span> Queue</div><div class="line"></div><div class="line">In [<span class="number">4</span>]: q = Queue() <span class="comment"># 先入先出</span></div><div class="line"></div><div class="line">In [<span class="number">5</span>]: q.</div><div class="line">q.all_tasks_done    q.get               q.maxsize           q.not_full          q.qsize             q.unfinished_tasks</div><div class="line">q.empty             q.get_nowait        q.mutex             q.put               q.queue             </div><div class="line">q.full              q.join              q.not_empty         q.put_nowait        q.task_done         </div><div class="line"></div><div class="line">In [<span class="number">6</span>]: q.put(<span class="number">1</span>)</div><div class="line"></div><div class="line">In [<span class="number">7</span>]: q.put(<span class="number">2</span>)</div><div class="line"></div><div class="line">In [<span class="number">8</span>]: q.get()</div><div class="line">Out[<span class="number">8</span>]: <span class="number">1</span></div><div class="line"></div><div class="line">In [<span class="number">9</span>]: <span class="keyword">from</span> Queue <span class="keyword">import</span> LifoQueue</div><div class="line"></div><div class="line">In [<span class="number">10</span>]: lifoq = LifoQueue() <span class="comment"># 后入先出</span></div><div class="line"></div><div class="line">In [<span class="number">11</span>]: lifoq.</div><div class="line">lifoq.all_tasks_done    lifoq.get_nowait        lifoq.not_empty         lifoq.qsize             </div><div class="line">lifoq.empty             lifoq.join              lifoq.not_full          lifoq.queue             </div><div class="line">lifoq.full              lifoq.maxsize           lifoq.put               lifoq.task_done         </div><div class="line">lifoq.get               lifoq.mutex             lifoq.put_nowait        lifoq.unfinished_tasks  </div><div class="line"></div><div class="line">In [<span class="number">12</span>]: lifoq.put(<span class="number">1</span>)</div><div class="line"></div><div class="line">In [<span class="number">13</span>]: lifoq.put(<span class="number">2</span>)</div><div class="line"></div><div class="line">In [<span class="number">14</span>]: lifoq.get()</div><div class="line">Out[<span class="number">14</span>]: <span class="number">2</span></div></pre></td></tr></table></figure></p>
+<p><em>operator</em><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">In [<span class="number">1</span>]: operator.</div><div class="line">operator.abs               operator.getitem           operator.inv               operator.itemgetter        operator.pos</div><div class="line">operator.add               operator.getslice          operator.invert            operator.itruediv          operator.pow</div><div class="line">operator.and_              operator.gt                operator.ior               operator.ixor              operator.repeat</div><div class="line">operator.attrgetter        operator.iadd              operator.ipow              operator.le                operator.rshift</div><div class="line">operator.concat            operator.iand              operator.irepeat           operator.lshift            operator.sequenceIncludes</div><div class="line">operator.contains          operator.iconcat           operator.irshift           operator.lt                operator.setitem</div><div class="line">operator.countOf           operator.idiv              operator.isCallable        operator.methodcaller      operator.setslice</div><div class="line">operator.delitem           operator.ifloordiv         operator.isMappingType     operator.mod               operator.sub</div><div class="line">operator.delslice          operator.ilshift           operator.isNumberType      operator.mul               operator.truediv</div><div class="line">operator.div               operator.imod              operator.isSequenceType    operator.ne                operator.truth</div><div class="line">operator.eq                operator.imul              operator.is_               operator.neg               operator.xor</div><div class="line">operator.floordiv          operator.index             operator.is_not            operator.not_              </div><div class="line">operator.ge                operator.indexOf           operator.isub              operator.or_               </div><div class="line"></div><div class="line">In [<span class="number">2</span>]: a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</div><div class="line"></div><div class="line">In [<span class="number">3</span>]: b = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</div><div class="line"></div><div class="line">In [<span class="number">4</span>]: map(operator.add, a, b) <span class="comment"># 用在这里可以取代 lambda x,y: x+y</span></div><div class="line">Out[<span class="number">4</span>]: [<span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>]</div></pre></td></tr></table></figure></p>
+<p><em>itertools</em><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line">In [<span class="number">1</span>]: itertools.</div><div class="line">itertools.chain                          itertools.groupby                        itertools.permutations</div><div class="line">itertools.combinations                   itertools.ifilter                        itertools.product</div><div class="line">itertools.combinations_with_replacement  itertools.ifilterfalse                   itertools.repeat</div><div class="line">itertools.compress                       itertools.imap                           itertools.starmap</div><div class="line">itertools.count                          itertools.islice                         itertools.takewhile</div><div class="line">itertools.cycle                          itertools.izip                           itertools.tee</div><div class="line">itertools.dropwhile                      itertools.izip_longest                   </div><div class="line"></div><div class="line">In [<span class="number">2</span>]: a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>]</div><div class="line"></div><div class="line">In [<span class="number">3</span>]: b = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]</div><div class="line"></div><div class="line"><span class="comment"># combinations返回无元素重复的组合（无序）</span></div><div class="line">In [<span class="number">4</span>]: <span class="keyword">for</span> x <span class="keyword">in</span> itertools.combinations(a,<span class="number">2</span>):</div><div class="line">   ....:     <span class="keyword">print</span> x</div><div class="line">   ....:     </div><div class="line">(<span class="number">1</span>, <span class="number">2</span>)</div><div class="line">(<span class="number">1</span>, <span class="number">3</span>)</div><div class="line">(<span class="number">2</span>, <span class="number">3</span>)</div><div class="line"></div><div class="line"><span class="comment"># combinations_with_replacement返回有元素重复的组合（无序）</span></div><div class="line">In [<span class="number">5</span>]: <span class="keyword">for</span> x <span class="keyword">in</span> itertools.combinations_with_replacement(a,<span class="number">2</span>):</div><div class="line">   ....:     <span class="keyword">print</span> x</div><div class="line">   ....:     </div><div class="line">(<span class="number">1</span>, <span class="number">1</span>)</div><div class="line">(<span class="number">1</span>, <span class="number">2</span>)</div><div class="line">(<span class="number">1</span>, <span class="number">3</span>)</div><div class="line">(<span class="number">2</span>, <span class="number">2</span>)</div><div class="line">(<span class="number">2</span>, <span class="number">3</span>)</div><div class="line">(<span class="number">3</span>, <span class="number">3</span>)</div><div class="line"></div><div class="line"><span class="comment"># permutations返回排列（有序）</span></div><div class="line">In [<span class="number">70</span>]: <span class="keyword">for</span> x <span class="keyword">in</span> itertools.permutations(a,<span class="number">2</span>):</div><div class="line">   ....:     <span class="keyword">print</span> x</div><div class="line">   ....:     </div><div class="line">(<span class="number">1</span>, <span class="number">2</span>)</div><div class="line">(<span class="number">1</span>, <span class="number">3</span>)</div><div class="line">(<span class="number">2</span>, <span class="number">1</span>)</div><div class="line">(<span class="number">2</span>, <span class="number">3</span>)</div><div class="line">(<span class="number">3</span>, <span class="number">1</span>)</div><div class="line">(<span class="number">3</span>, <span class="number">2</span>)</div><div class="line"></div><div class="line"><span class="comment"># product用于返回笛卡尔积</span></div><div class="line">In [<span class="number">5</span>]: <span class="keyword">for</span> x <span class="keyword">in</span> itertools.product(a,b):</div><div class="line">   ....:     <span class="keyword">print</span> x</div><div class="line">   ....:     </div><div class="line">(<span class="number">1</span>, <span class="number">4</span>)</div><div class="line">(<span class="number">1</span>, <span class="number">5</span>)</div><div class="line">(<span class="number">1</span>, <span class="number">6</span>)</div><div class="line">(<span class="number">2</span>, <span class="number">4</span>)</div><div class="line">(<span class="number">2</span>, <span class="number">5</span>)</div><div class="line">(<span class="number">2</span>, <span class="number">6</span>)</div><div class="line">(<span class="number">3</span>, <span class="number">4</span>)</div><div class="line">(<span class="number">3</span>, <span class="number">5</span>)</div><div class="line">(<span class="number">3</span>, <span class="number">6</span>)</div></pre></td></tr></table></figure></p>
+<p><em>collections</em><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div></pre></td><td class="code"><pre><div class="line">In [1]: collections.</div><div class="line">collections.Callable         collections.Iterator         collections.MutableSet       collections.defaultdict</div><div class="line">collections.Container        collections.KeysView         collections.OrderedDict      collections.deque</div><div class="line">collections.Counter          collections.Mapping          collections.Sequence         collections.namedtuple</div><div class="line">collections.Hashable         collections.MappingView      collections.Set              </div><div class="line">collections.ItemsView        collections.MutableMapping   collections.Sized            </div><div class="line">collections.Iterable         collections.MutableSequence  collections.ValuesView       </div><div class="line"></div><div class="line"># Counter用于列表中元素统计</div><div class="line">In [2]: from collections import Counter</div><div class="line"></div><div class="line">In [3]: a = [1,1,2,3,3,3,5]</div><div class="line"></div><div class="line">In [4]: b = Counter(a)</div><div class="line"></div><div class="line">In [5]: b</div><div class="line">Out[5]: Counter(&#123;1: 2, 2: 1, 3: 3, 5: 1&#125;)</div><div class="line"></div><div class="line">In [6]: b[5]</div><div class="line">Out[6]: 1</div><div class="line"></div><div class="line">In [7]: b[4] # 与字典不同，无响应key值时返回0，有点像defaultdict</div><div class="line">Out[7]: 0</div><div class="line"></div><div class="line">In [8]: b[3]</div><div class="line">Out[8]: 3</div><div class="line"></div><div class="line"># OrderedDict可以用于初始化一个排序字典</div><div class="line">In [1]: from collections import OrderedDict</div><div class="line"></div><div class="line"># 这里和普通的字典属性一致</div><div class="line">In [2]: OrderedDict.</div><div class="line">OrderedDict.clear       OrderedDict.has_key     OrderedDict.itervalues  OrderedDict.setdefault  OrderedDict.viewkeys</div><div class="line">OrderedDict.copy        OrderedDict.items       OrderedDict.keys        OrderedDict.update      OrderedDict.viewvalues</div><div class="line">OrderedDict.fromkeys    OrderedDict.iteritems   OrderedDict.pop         OrderedDict.values      </div><div class="line">OrderedDict.get         OrderedDict.iterkeys    OrderedDict.popitem     OrderedDict.viewitems   </div><div class="line"></div><div class="line"># 初始化也一致，但不同点在于该字典有序，根据字典链接字符串时可用</div><div class="line">In [3]: OrderedDict(([1,2],[3,4]))</div><div class="line">Out[3]: OrderedDict([(1, 2), (3, 4)])</div><div class="line"></div><div class="line"># defaultdict可用于初始化某一种类型的字典，如果查询不到值则设置为给定的类型</div><div class="line">In [1]: from collections import defaultdict</div><div class="line"></div><div class="line">In [2]: d = defaultdict(int)</div><div class="line"></div><div class="line">In [3]: d[1]</div><div class="line">Out[3]: 0</div><div class="line"></div><div class="line">In [4]: d2 = defaultdict(list)</div><div class="line"></div><div class="line">In [5]: d2[1]</div><div class="line">Out[5]: []</div><div class="line"></div><div class="line"># deque双端队列</div><div class="line">In [1]: from collections import deque</div><div class="line"></div><div class="line">In [2]: d = deque('abcd')</div><div class="line"></div><div class="line">In [3]: d.</div><div class="line">d.append      d.clear       d.extend      d.maxlen      d.popleft     d.reverse     </div><div class="line">d.appendleft  d.count       d.extendleft  d.pop         d.remove      d.rotate      </div><div class="line"></div><div class="line">In [4]: print d</div><div class="line">deque(['a', 'b', 'c', 'd'])</div><div class="line"></div><div class="line">In [5]: d.remove('c')</div><div class="line"></div><div class="line">In [6]: d</div><div class="line">Out[6]: deque(['a', 'b', 'd'])</div><div class="line"></div><div class="line">In [7]: d.append('m')</div><div class="line"></div><div class="line">In [8]: d</div><div class="line">Out[8]: deque(['a', 'b', 'd', 'm'])</div><div class="line"></div><div class="line">In [9]: d.appendleft('o')</div><div class="line"></div><div class="line">In [10]: d</div><div class="line">Out[10]: deque(['o', 'a', 'b', 'd', 'm'])</div><div class="line"></div><div class="line">In [11]: d.popleft()</div><div class="line">Out[11]: 'o'</div><div class="line"></div><div class="line">In [12]: d</div><div class="line">Out[12]: deque(['a', 'b', 'd', 'm'])</div><div class="line"></div><div class="line"># namedtuple命名元组，方便描述，用具体的名称来指代，避免下标造成的指代不明</div><div class="line">In [1]: from collections import namedtuple</div><div class="line"></div><div class="line">In [2]: namedtuple?</div><div class="line">Signature: namedtuple(typename, field_names, verbose=False, rename=False)</div><div class="line">Docstring:</div><div class="line">Returns a new subclass of tuple with named fields.</div><div class="line"></div><div class="line">&gt;&gt;&gt; Point = namedtuple('Point', ['x', 'y'])</div><div class="line">&gt;&gt;&gt; Point.__doc__                   # docstring for the new class</div><div class="line">'Point(x, y)'</div><div class="line">&gt;&gt;&gt; p = Point(11, y=22)             # instantiate with positional args or keywords</div><div class="line">&gt;&gt;&gt; p[0] + p[1]                     # indexable like a plain tuple</div><div class="line">33</div><div class="line">&gt;&gt;&gt; x, y = p                        # unpack like a regular tuple</div><div class="line">&gt;&gt;&gt; x, y</div><div class="line">(11, 22)</div><div class="line">&gt;&gt;&gt; p.x + p.y                       # fields also accessable by name</div><div class="line">33</div><div class="line">&gt;&gt;&gt; d = p._asdict()                 # convert to a dictionary</div><div class="line">&gt;&gt;&gt; d['x']</div><div class="line">11</div><div class="line">&gt;&gt;&gt; Point(**d)                      # convert from a dictionary</div><div class="line">Point(x=11, y=22)</div><div class="line">&gt;&gt;&gt; p._replace(x=100)               # _replace() is like str.replace() but targets named fields</div><div class="line">Point(x=100, y=22)</div><div class="line">File:      /usr/lib/python2.7/collections.py</div><div class="line">Type:      function</div></pre></td></tr></table></figure></p>
+<p><em>heapq</em><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># heapq是一个最小堆，堆顶元素永远是最小的</span></div><div class="line">In [<span class="number">1</span>]: heapq.</div><div class="line">heapq.chain        heapq.heapify      heapq.heappushpop  heapq.islice       heapq.merge        heapq.tee          </div><div class="line">heapq.cmp_lt       heapq.heappop      heapq.heapreplace  heapq.itemgetter   heapq.nlargest     </div><div class="line">heapq.count        heapq.heappush     heapq.imap         heapq.izip         heapq.nsmallest    </div><div class="line"></div><div class="line"><span class="comment"># 返回最大或最小的n个元素</span></div><div class="line">In [<span class="number">1</span>]: a = [<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>]</div><div class="line"></div><div class="line">In [<span class="number">2</span>]: heapq.n</div><div class="line">heapq.nlargest   heapq.nsmallest  </div><div class="line"></div><div class="line">In [<span class="number">3</span>]: heapq.nlargest(<span class="number">2</span>,a)</div><div class="line">Out[<span class="number">3</span>]: [<span class="number">6</span>, <span class="number">4</span>]</div><div class="line"></div><div class="line">In [<span class="number">4</span>]: heapq.nsmallest(<span class="number">2</span>,a)</div><div class="line">Out[<span class="number">4</span>]: [<span class="number">2</span>, <span class="number">4</span>]</div><div class="line"></div><div class="line"><span class="comment"># 先插入一元素再返回一个最小元素，heapq.heapreplace(heap, item)是先返回再插入</span></div><div class="line">In [<span class="number">1</span>]: h = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">9</span>,<span class="number">5</span>]</div><div class="line"></div><div class="line">In [<span class="number">2</span>]: heapq.heappushpop(h,<span class="number">4</span>)</div><div class="line">Out[<span class="number">2</span>]: <span class="number">1</span></div><div class="line"></div><div class="line">In [<span class="number">3</span>]: h</div><div class="line">Out[<span class="number">3</span>]: [<span class="number">2</span>, <span class="number">4</span>, <span class="number">9</span>, <span class="number">5</span>]</div><div class="line"></div><div class="line"><span class="comment"># 合并两个堆，必须保证是正确的堆序，否则返回无序（见下例）</span></div><div class="line">In [<span class="number">1</span>]: a = [<span class="number">2</span>,<span class="number">4</span>,<span class="number">6</span>]</div><div class="line"></div><div class="line">In [<span class="number">2</span>]: b = [<span class="number">5</span>,<span class="number">3</span>,<span class="number">1</span>]</div><div class="line"></div><div class="line">In [<span class="number">3</span>]: c = heapq.merge(a,b)</div><div class="line"></div><div class="line">In [<span class="number">4</span>]: list(c)</div><div class="line">Out[<span class="number">4</span>]: [<span class="number">2</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">1</span>, <span class="number">6</span>]</div><div class="line"></div><div class="line"><span class="comment"># 实现堆排序</span></div><div class="line"><span class="keyword">from</span> heapq <span class="keyword">import</span> *</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">heapsort</span><span class="params">(iterable)</span>:</span></div><div class="line">    h = []</div><div class="line">    <span class="keyword">for</span> value <span class="keyword">in</span> iterable:</div><div class="line">        heappush(h,value)</div><div class="line">    <span class="keyword">return</span> [heappop(h) <span class="keyword">for</span> i <span class="keyword">in</span> range(len(h))]</div><div class="line"></div><div class="line"><span class="keyword">if</span> __name__==<span class="string">"__main__"</span>:</div><div class="line">    <span class="keyword">print</span> heapsort([<span class="number">1</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">9</span>,<span class="number">2</span>])</div></pre></td></tr></table></figure></p>
+<p><em>functools</em><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">In [<span class="number">1</span>]: functools.</div><div class="line">functools.WRAPPER_ASSIGNMENTS  functools.cmp_to_key           functools.reduce               functools.update_wrapper</div><div class="line">functools.WRAPPER_UPDATES      functools.partial              functools.total_ordering       functools.wraps</div><div class="line"></div><div class="line"><span class="comment"># partial函数可以重新绑定函数的可选参数，生成一个可调用的partial对象</span></div><div class="line"></div><div class="line"><span class="comment"># wraps可以把被封装函数的__name__、__module__、__doc__和 __dict__都复制到封装函数去</span></div></pre></td></tr></table></figure></p>
+<p><em>bisect</em><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">In [<span class="number">1</span>]: bisect.</div><div class="line">bisect.bisect        bisect.bisect_left   bisect.bisect_right  bisect.insort        bisect.insort_left   bisect.insort_right</div><div class="line"></div><div class="line">In [<span class="number">2</span>]: data = [<span class="number">2</span>,<span class="number">3</span>,<span class="number">5</span>,<span class="number">7</span>]</div><div class="line"></div><div class="line">In [<span class="number">3</span>]: bisect.bisect(data,<span class="number">4</span>) <span class="comment"># 返回插入的位置，但并不会实际插入</span></div><div class="line">Out[<span class="number">3</span>]: <span class="number">2</span></div><div class="line"></div><div class="line">In [<span class="number">4</span>]: bisect.insort(data,<span class="number">4</span>) <span class="comment"># 插入数据，不会影响原有排序</span></div><div class="line"></div><div class="line">In [<span class="number">5</span>]: data</div><div class="line">Out[<span class="number">5</span>]: [<span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">7</span>]</div></pre></td></tr></table></figure></p>
+<p><em>array</em><br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">In [1]: array?</div><div class="line">Type:        module</div><div class="line">String form: &lt;module 'array' (built-in)&gt;</div><div class="line">Docstring:</div><div class="line">This module defines an object type which can efficiently represent</div><div class="line">an array of basic values: characters, integers, floating point</div><div class="line">numbers.  Arrays are sequence types and behave very much like lists,</div><div class="line">except that the type of objects stored in them is constrained.  The</div><div class="line">type is specified at object creation time by using a type code, which</div><div class="line">is a single character.  The following type codes are defined:</div><div class="line"></div><div class="line">    Type code   C Type             Minimum size in bytes</div><div class="line">    'c'         character          1</div><div class="line">    'b'         signed integer     1</div><div class="line">    'B'         unsigned integer   1</div><div class="line">    'u'         Unicode character  2</div><div class="line">    'h'         signed integer     2</div><div class="line">    'H'         unsigned integer   2</div><div class="line">    'i'         signed integer     2</div><div class="line">    'I'         unsigned integer   2</div><div class="line">    'l'         signed integer     4</div><div class="line">    'L'         unsigned integer   4</div><div class="line">    'f'         floating point     4</div><div class="line">    'd'         floating point     8</div><div class="line"></div><div class="line">The constructor is:</div><div class="line"></div><div class="line">array(typecode [, initializer]) -- create a new array</div></pre></td></tr></table></figure></p>
+<p><strong><strong>数据定义信息常用模块</strong></strong></p>
+<p><em>keyword</em><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">In [<span class="number">1</span>]: keyword.</div><div class="line">keyword.iskeyword  keyword.kwlist     keyword.main       </div><div class="line"></div><div class="line">In [<span class="number">2</span>]: <span class="keyword">print</span> keyword.kwlist</div><div class="line">[<span class="string">'and'</span>, <span class="string">'as'</span>, <span class="string">'assert'</span>, <span class="string">'break'</span>, <span class="string">'class'</span>, <span class="string">'continue'</span>, <span class="string">'def'</span>, <span class="string">'del'</span>, <span class="string">'elif'</span>, <span class="string">'else'</span>, <span class="string">'except'</span>, <span class="string">'exec'</span>, <span class="string">'finally'</span>, <span class="string">'for'</span>, <span class="string">'from'</span>, <span class="string">'global'</span>, <span class="string">'if'</span>, <span class="string">'import'</span>, <span class="string">'in'</span>, <span class="string">'is'</span>, <span class="string">'lambda'</span>, <span class="string">'not'</span>, <span class="string">'or'</span>, <span class="string">'pass'</span>, <span class="string">'print'</span>, <span class="string">'raise'</span>, <span class="string">'return'</span>, <span class="string">'try'</span>, <span class="string">'while'</span>, <span class="string">'with'</span>, <span class="string">'yield'</span>]</div></pre></td></tr></table></figure></p>
+<p><em>types</em><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">In [<span class="number">1</span>]: types.</div><div class="line">types.BooleanType           types.EllipsisType          types.ListType              types.StringTypes</div><div class="line">types.BufferType            types.FileType              types.LongType              types.TracebackType</div><div class="line">types.BuiltinFunctionType   types.FloatType             types.MemberDescriptorType  types.TupleType</div><div class="line">types.BuiltinMethodType     types.FrameType             types.MethodType            types.TypeType</div><div class="line">types.ClassType             types.FunctionType          types.ModuleType            types.UnboundMethodType</div><div class="line">types.CodeType              types.GeneratorType         types.NoneType              types.UnicodeType</div><div class="line">types.ComplexType           types.GetSetDescriptorType  types.NotImplementedType    types.XRangeType</div><div class="line">types.DictProxyType         types.InstanceType          types.ObjectType            </div><div class="line">types.DictType              types.IntType               types.SliceType             </div><div class="line">types.DictionaryType        types.LambdaType            types.StringType</div></pre></td></tr></table></figure></p>
+<p><em>string</em><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">In [<span class="number">1</span>]: string.</div><div class="line">string.Formatter        string.atol_error       string.index_error      string.printable        string.strip</div><div class="line">string.Template         string.capitalize       string.join             string.punctuation      string.swapcase</div><div class="line">string.ascii_letters    string.capwords         string.joinfields       string.replace          string.translate</div><div class="line">string.ascii_lowercase  string.center           string.letters          string.rfind            string.upper</div><div class="line">string.ascii_uppercase  string.count            string.ljust            string.rindex           string.uppercase</div><div class="line">string.atof             string.digits           string.lower            string.rjust            string.whitespace</div><div class="line">string.atof_error       string.expandtabs       string.lowercase        string.rsplit           string.zfill</div><div class="line">string.atoi             string.find             string.lstrip           string.rstrip           </div><div class="line">string.atoi_error       string.hexdigits        string.maketrans        string.split            </div><div class="line">string.atol             string.index            string.octdigits        string.splitfields      </div><div class="line"></div><div class="line">In [<span class="number">2</span>]: string.printable</div><div class="line">Out[<span class="number">2</span>]: <span class="string">'0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!"#$%&amp;\'()*+,-./:;&lt;=&gt;?@[\\]^_`&#123;|&#125;~ \t\n\r\x0b\x0c'</span></div><div class="line"></div><div class="line">In [<span class="number">3</span>]: string.letters</div><div class="line">Out[<span class="number">3</span>]: <span class="string">'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'</span></div><div class="line"></div><div class="line">In [<span class="number">4</span>]: string.digits</div><div class="line">Out[<span class="number">4</span>]: <span class="string">'0123456789'</span></div></pre></td></tr></table></figure></p>
+<p><strong><strong>数学相关常用模块</strong></strong></p>
+<p><em>math</em><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">In [<span class="number">95</span>]: math.</div><div class="line">math.acos       math.atanh      math.e          math.factorial  math.hypot      math.log10      math.sin        </div><div class="line">math.acosh      math.ceil       math.erf        math.floor      math.isinf      math.log1p      math.sinh       </div><div class="line">math.asin       math.copysign   math.erfc       math.fmod       math.isnan      math.modf       math.sqrt       </div><div class="line">math.asinh      math.cos        math.exp        math.frexp      math.ldexp      math.pi         math.tan        </div><div class="line">math.atan       math.cosh       math.expm1      math.fsum       math.lgamma     math.pow        math.tanh       </div><div class="line">math.atan2      math.degrees    math.fabs       math.gamma      math.log        math.radians    math.trunc</div></pre></td></tr></table></figure></p>
+<p><em>decimal</em><br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">In [<span class="number">96</span>]: decimal.</div><div class="line">decimal.BasicContext        decimal.DivisionByZero      decimal.ROUND_05UP          decimal.Rounded</div><div class="line">decimal.Clamped             decimal.DivisionImpossible  decimal.ROUND_CEILING       decimal.Subnormal</div><div class="line">decimal.Context             decimal.DivisionUndefined   decimal.ROUND_DOWN          decimal.Underflow</div><div class="line">decimal.ConversionSyntax    decimal.ExtendedContext     decimal.ROUND_FLOOR         decimal.getcontext</div><div class="line">decimal.Decimal             decimal.Inexact             decimal.ROUND_HALF_DOWN     decimal.localcontext</div><div class="line">decimal.DecimalException    decimal.InvalidContext      decimal.ROUND_HALF_EVEN     decimal.setcontext</div><div class="line">decimal.DecimalTuple        decimal.InvalidOperation    decimal.ROUND_HALF_UP       </div><div class="line">decimal.DefaultContext      decimal.Overflow            decimal.ROUND_UP</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/module/" rel="tag">#module</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/07/MySQL命令整理/" rel="next" title="MySQL命令整理">
+                <i class="fa fa-chevron-left"></i> MySQL命令整理
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/01/Ebook/" rel="prev" title="电子书书单">
+                电子书书单 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/07/31/python中常用高级模块/"
+           data-title="python中常用高级模块" data-url="http://yoursite.com/2016/07/31/python中常用高级模块/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://7xjopn.com1.z0.glb.clouddn.com/头像.jpg"
+               alt="LCH" />
+          <p class="site-author-name" itemprop="name">LCH</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据结构和算法中常用模块"><span class="nav-number">1.</span> <span class="nav-text">数据结构和算法中常用模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据定义信息常用模块"><span class="nav-number">2.</span> <span class="nav-text">数据定义信息常用模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数学相关"><span class="nav-number">3.</span> <span class="nav-text">数学相关</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LCH</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"hilaopo"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+  </script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+      for (i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  </script>
+  <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("Ct9tcOp1PvP3woRzKRi73ojr-gzGzoHsz", "MxXrwPH9NUo1vNN3nJxoumnr");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>
